@@ -1,0 +1,1 @@
+Blog server for [my website](https://notsuu.github.io). If you wish to use it, clone the repo, update the redirect at `app.get('/')` to wherever you prefer (or remove it altogether), and post by updating `posts.json` as well as adding your posts in the format of `postId.json` in the `posts` folder. Yeah, groundbreaking discovery, I know.
