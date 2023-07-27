@@ -9,9 +9,11 @@ app.get('/', (req, res) => {
 app.get('/posts', (req, res) => {
     res.sendFile(__dirname+'/posts.json')
 })
-app.get('/post', (req, res) => {
-    if (!req.query.id) { res.sendStatus(400); return }
-    if (!fs.existsSync(__dirname+'/posts/'+req.query.id+'.json')) { res.sendStatus(404); return }
-    res.sendFile(__dirname+'/posts/'+req.query.id+'.json')
+app.get('/post/:id', (req, res) => {
+    //this is probably not required. maybe it is, we'll see
+    //if (!req.params.id) { res.sendStatus(400); return }
+    let filepath = __dirname+'/posts/'+req.params.id+'.json'
+    if (!fs.existsSync(filepath) { res.sendStatus(404); return }
+    res.sendFile(filepath)
 })
 app.listen(process.env.PORT || 3000)
