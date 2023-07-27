@@ -13,7 +13,7 @@ app.get('/post/:id', (req, res) => {
     //this is probably not required. maybe it is, we'll see
     //if (!req.params.id) { res.sendStatus(400); return }
     let filepath = __dirname+'/posts/'+req.params.id+'.json'
-    if (!fs.existsSync(filepath) { res.sendStatus(404); return }
+    if (!fs.existsSync(filepath)) { res.sendStatus(404); return }
     res.sendFile(filepath)
 })
 app.listen(process.env.PORT || 3000)
