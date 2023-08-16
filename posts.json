@@ -1,6 +1,12 @@
 {
     "posts": [
         {
+            "id": 2,
+            "title": "small website update",
+            "header": "wtf f notus actualy alive/?!??",
+            "postedAt": 1692211038
+        },
+        {
             "id": 1,
             "title": "announcer game rant",
             "header": "how my code sucks",
